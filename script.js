@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-  // 1. Scroll do Header
+  // 1. Scroll do Header com Efeito Sticky
   const header = document.getElementById('header');
   window.addEventListener('scroll', () => {
     if (window.scrollY > 30) {
@@ -10,23 +10,33 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // 2. Menu Mobile Toggle
+  // 2. Menu Mobile Responsivo & Trava do Body Scroll
   const menuToggle = document.getElementById('menu-toggle');
+  const btnCloseMenu = document.getElementById('btn-close-menu');
   const navMenu = document.getElementById('nav-menu');
+  const menuBackdrop = document.getElementById('menu-backdrop');
 
-  if (menuToggle && navMenu) {
-    menuToggle.addEventListener('click', () => {
-      navMenu.classList.toggle('active');
-    });
-
-    document.querySelectorAll('.nav-link').forEach(link => {
-      link.addEventListener('click', () => {
-        navMenu.classList.remove('active');
-      });
-    });
+  function openMenu() {
+    navMenu.classList.add('active');
+    menuBackdrop.classList.add('active');
+    document.body.classList.add('menu-open');
   }
 
-  // 3. Modais com informações detalhadas de cada serviço/método
+  function closeMenu() {
+    navMenu.classList.remove('active');
+    menuBackdrop.classList.remove('active');
+    document.body.classList.remove('menu-open');
+  }
+
+  if (menuToggle) menuToggle.addEventListener('click', openMenu);
+  if (btnCloseMenu) btnCloseMenu.addEventListener('click', closeMenu);
+  if (menuBackdrop) menuBackdrop.addEventListener('click', closeMenu);
+
+  document.querySelectorAll('.nav-link, .btn-cta-nav').forEach(link => {
+    link.addEventListener('click', closeMenu);
+  });
+
+  // 3. Modal Interativo com Dados Dinâmicos
   const modalData = {
     'modal-fundamentos': {
       title: 'Fundamentos & Controle de Bola',
@@ -57,25 +67,25 @@ document.addEventListener('DOMContentLoaded', () => {
 
       if (data) {
         modalBody.innerHTML = `
-          <h3 style="color: var(--primary); font-size: 1.5rem; margin-bottom: 12px; font-weight: 800;">${data.title}</h3>
-          <p style="color: var(--muted-text); font-size: 0.98rem; line-height: 1.6;">${data.description}</p>
+          <h3 style="color: var(--primary); font-size: 1.4rem; margin-bottom: 12px; font-weight: 800;">${data.title}</h3>
+          <p style="color: var(--muted-text); font-size: 0.95rem; line-height: 1.6;">${data.description}</p>
         `;
         modalOverlay.classList.add('active');
+        document.body.classList.add('menu-open');
       }
     });
   });
 
-  if (modalClose) {
-    modalClose.addEventListener('click', () => {
-      modalOverlay.classList.remove('active');
-    });
+  function closeModal() {
+    modalOverlay.classList.remove('active');
+    document.body.classList.remove('menu-open');
   }
+
+  if (modalClose) modalClose.addEventListener('click', closeModal);
 
   if (modalOverlay) {
     modalOverlay.addEventListener('click', (e) => {
-      if (e.target === modalOverlay) {
-        modalOverlay.classList.remove('active');
-      }
+      if (e.target === modalOverlay) closeModal();
     });
   }
 
