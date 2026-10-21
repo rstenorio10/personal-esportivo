@@ -2,7 +2,7 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
   <title>Personal Esportivo | Alta Performance & Fundamentos do Futebol</title>
   <link rel="stylesheet" href="./style.css">
   <!-- Google Fonts & Font Awesome -->
@@ -12,6 +12,9 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
+
+  <!-- Overlay para fechar o menu mobile ao clicar fora -->
+  <div class="menu-backdrop" id="menu-backdrop"></div>
 
   <!-- Header / Navigation -->
   <header class="header" id="header">
@@ -23,15 +26,19 @@
       </div>
 
       <ul class="nav-menu" id="nav-menu">
+        <li class="mobile-header">
+          <span class="logo-mobile"><i class="fa-solid fa-futbol"></i> MENU</span>
+          <button class="btn-close-menu" id="btn-close-menu" aria-label="Fechar menu"><i class="fa-solid fa-xmark"></i></button>
+        </li>
         <li><a href="#inicio" class="nav-link active">Início</a></li>
         <li><a href="#metodos" class="nav-link">Métodos</a></li>
         <li><a href="#sobre" class="nav-link">Sobre Mim</a></li>
         <li><a href="#contato" class="btn-cta-nav">Agendar Avaliação</a></li>
       </ul>
 
-      <div class="menu-toggle" id="menu-toggle">
+      <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menu de navegação">
         <i class="fa-solid fa-bars"></i>
-      </div>
+      </button>
     </nav>
   </header>
 
@@ -58,7 +65,7 @@
               <p>Domine passe, recepção orientada, tomada de decisão e arranque tático com metodologia prática individualizada.</p>
               
               <div class="hero-btns">
-                <a href="https://wa.me/5511999999999?text=Ol%C3%A1!%20Quero%20agendar%20um%20treino%20de%20futebol." target="_blank" class="btn-primary">
+                <a href="https://wa.me/5511999999999?text=Ol%C3%A1!%20Quero%20agendar%20um%20treino%20de%20futebol." target="_blank" rel="noopener" class="btn-primary">
                   <i class="fa-brands fa-whatsapp"></i> Agendar Aula Experimental
                 </a>
                 <a href="#metodos" class="btn-secondary">Ver Métodos <i class="fa-solid fa-arrow-right"></i></a>
@@ -92,7 +99,7 @@
       </div>
     </section>
 
-    <!-- SEÇÃO DE MÉTODOS COMPLETA COM FOTOS E DESCRIÇÕES -->
+    <!-- SEÇÃO DE MÉTODOS -->
     <section class="sec-metodos" id="metodos">
       <div class="container">
         <div class="section-header">
@@ -103,10 +110,10 @@
 
         <div class="metodos-grid">
           
-          <!-- Card 1: Fundamentos -->
+          <!-- Card 1 -->
           <article class="card-metodo" data-modal="modal-fundamentos">
             <div class="card-img-wrapper">
-              <img src="https://images.unsplash.com/photo-1579952363873-27f3bade9f55?q=80&w=800&auto=format&fit=crop" alt="Treino de Fundamentos e Controle de Bola" class="card-img">
+              <img src="https://images.unsplash.com/photo-1579952363873-27f3bade9f55?q=80&w=800&auto=format&fit=crop" alt="Treino de Fundamentos e Controle de Bola" class="card-img" loading="lazy">
               <div class="card-badge"><i class="fa-solid fa-star"></i> Mais Procurado</div>
               <div class="card-icon-floating"><i class="fa-solid fa-futbol"></i></div>
             </div>
@@ -121,10 +128,10 @@
             </div>
           </article>
 
-          <!-- Card 2: Preparação Física -->
+          <!-- Card 2 -->
           <article class="card-metodo" data-modal="modal-fisico">
             <div class="card-img-wrapper">
-              <img src="https://images.unsplash.com/photo-1517649763962-0c623266010b?q=80&w=800&auto=format&fit=crop" alt="Preparação Física Específica para Futebol" class="card-img">
+              <img src="https://images.unsplash.com/photo-1517649763962-0c623266010b?q=80&w=800&auto=format&fit=crop" alt="Preparação Física Específica para Futebol" class="card-img" loading="lazy">
               <div class="card-badge"><i class="fa-solid fa-bolt"></i> Alta Intensidade</div>
               <div class="card-icon-floating"><i class="fa-solid fa-stopwatch"></i></div>
             </div>
@@ -139,10 +146,10 @@
             </div>
           </article>
 
-          <!-- Card 3: Leitura Tática -->
+          <!-- Card 3 -->
           <article class="card-metodo" data-modal="modal-tatico">
             <div class="card-img-wrapper">
-              <img src="https://images.unsplash.com/photo-1508098682722-e99c43a406b2?q=80&w=800&auto=format&fit=crop" alt="Leitura Tática e Inteligência de Jogo" class="card-img">
+              <img src="https://images.unsplash.com/photo-1508098682722-e99c43a406b2?q=80&w=800&auto=format&fit=crop" alt="Leitura Tática e Inteligência de Jogo" class="card-img" loading="lazy">
               <div class="card-badge"><i class="fa-solid fa-brain"></i> Cognitivo</div>
               <div class="card-icon-floating"><i class="fa-solid fa-chess-board"></i></div>
             </div>
@@ -157,10 +164,10 @@
             </div>
           </article>
 
-          <!-- Card 4: Treino por Posição -->
+          <!-- Card 4 -->
           <article class="card-metodo" data-modal="modal-especifico">
             <div class="card-img-wrapper">
-              <img src="https://images.unsplash.com/photo-1526232761682-d26e03ac148e?q=80&w=800&auto=format&fit=crop" alt="Treinamento Técnico por Posição" class="card-img">
+              <img src="https://images.unsplash.com/photo-1526232761682-d26e03ac148e?q=80&w=800&auto=format&fit=crop" alt="Treinamento Técnico por Posição" class="card-img" loading="lazy">
               <div class="card-badge"><i class="fa-solid fa-bullseye"></i> Foco Posição</div>
               <div class="card-icon-floating"><i class="fa-solid fa-crosshair"></i></div>
             </div>
@@ -175,28 +182,6 @@
             </div>
           </article>
 
-          <!-- Guia de expansão para inclusão de novos cards -->
-          <!-- 
-            Para adicionar um novo card no futuro, copie o modelo abaixo e altere as informações:
-
-            <article class="card-metodo" data-modal="modal-NOVO-ID">
-              <div class="card-img-wrapper">
-                <img src="URL_DA_SUA_IMAGEM.jpg" alt="Descrição da Imagem" class="card-img">
-                <div class="card-badge"><i class="fa-solid fa-star"></i> Badge Personalizado</div>
-                <div class="card-icon-floating"><i class="fa-solid fa-futbol"></i></div>
-              </div>
-              <div class="card-content">
-                <h3>Título do Novo Serviço</h3>
-                <p>Descrição detalhada do novo serviço oferecido.</p>
-                <ul class="metodo-features">
-                  <li><i class="fa-solid fa-check-circle"></i> Benefício 1</li>
-                  <li><i class="fa-solid fa-check-circle"></i> Benefício 2</li>
-                </ul>
-                <button class="btn-card">Detalhes do Método <i class="fa-solid fa-arrow-right"></i></button>
-              </div>
-            </article>
-          -->
-
         </div>
       </div>
     </section>
@@ -205,7 +190,7 @@
   <!-- Modal Interativo de Detalhes -->
   <div class="modal-overlay" id="modal-overlay">
     <div class="modal-container">
-      <button class="modal-close" id="modal-close"><i class="fa-solid fa-xmark"></i></button>
+      <button class="modal-close" id="modal-close" aria-label="Fechar janela modal"><i class="fa-solid fa-xmark"></i></button>
       <div class="modal-body" id="modal-body"></div>
     </div>
   </div>
