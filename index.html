@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Personal Esportivo | Alta Performance & Fundamentos do Futebol</title>
+  <link rel="stylesheet" href="./style.css">
+  <!-- Google Fonts & Font Awesome -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700;800;900&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- Header / Navigation -->
+  <header class="header" id="header">
+    <nav class="nav-hero container">
+      <div class="nav-cabecalho">
+        <a href="#inicio" class="logo">
+          <i class="fa-solid fa-futbol"></i> PRO<span>PERFORMANCE</span>
+        </a>
+      </div>
+
+      <ul class="nav-menu" id="nav-menu">
+        <li><a href="#inicio" class="nav-link active">Início</a></li>
+        <li><a href="#metodos" class="nav-link">Métodos</a></li>
+        <li><a href="#sobre" class="nav-link">Sobre Mim</a></li>
+        <li><a href="#contato" class="btn-cta-nav">Agendar Avaliação</a></li>
+      </ul>
+
+      <div class="menu-toggle" id="menu-toggle">
+        <i class="fa-solid fa-bars"></i>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Seção Principal Split -->
+    <section class="sec-principal" id="inicio">
+      <div class="container hero-grid">
+        <div class="hero-left">
+          <div class="personal-card">
+            <div class="personal-profile">
+              <div class="avatar-wrapper">
+                <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=400&auto=format&fit=crop" alt="Foto do Personal Trainer Esportivo" class="personal-img">
+                <span class="status-badge" title="Disponível para novos alunos"></span>
+              </div>
+              <div class="personal-info">
+                <h3>Treinador Pedro</h3>
+                <p><i class="fa-solid fa-certificate"></i> Especialista em Fundamentos & Performance</p>
+              </div>
+            </div>
+
+            <div class="hero-texto">
+              <span class="badge-tag"><i class="fa-solid fa-fire"></i> Treino Individual & de Alta Performance</span>
+              <h1>Evolua Seu <span>Futebol</span> ao Nível Profissional</h1>
+              <p>Domine passe, recepção orientada, tomada de decisão e arranque tático com metodologia prática individualizada.</p>
+              
+              <div class="hero-btns">
+                <a href="https://wa.me/5511999999999?text=Ol%C3%A1!%20Quero%20agendar%20um%20treino%20de%20futebol." target="_blank" class="btn-primary">
+                  <i class="fa-brands fa-whatsapp"></i> Agendar Aula Experimental
+                </a>
+                <a href="#metodos" class="btn-secondary">Ver Métodos <i class="fa-solid fa-arrow-right"></i></a>
+              </div>
+            </div>
+
+            <div class="personal-stats">
+              <div class="stat-item">
+                <span class="stat-num">+100</span>
+                <span class="stat-desc">Atletas Treinados</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-num">100%</span>
+                <span class="stat-desc">Prática em Campo</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-right">
+          <div class="video-container">
+            <video autoplay loop muted playsinline poster="https://images.unsplash.com/photo-1579952363873-27f3bade9f55?q=80&w=1600&auto=format&fit=crop">
+              <source src="./img/pedro-img.mp4" type="video/mp4">
+              Seu navegador não suporta vídeos em HTML5.
+            </video>
+            <div class="video-tag">
+              <i class="fa-solid fa-circle-play"></i> Treino em Ação
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SEÇÃO DE MÉTODOS COMPLETA COM FOTOS E DESCRIÇÕES -->
+    <section class="sec-metodos" id="metodos">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag"><i class="fa-solid fa-layer-group"></i> Metodologia Exclusiva</span>
+          <h2>Métodos de <span>Treinamento Técnico</span></h2>
+          <p>Treinos estruturados em pilares essenciais do futebol profissional para acelerar a evolução do atleta dentro de campo.</p>
+        </div>
+
+        <div class="metodos-grid">
+          
+          <!-- Card 1: Fundamentos -->
+          <article class="card-metodo" data-modal="modal-fundamentos">
+            <div class="card-img-wrapper">
+              <img src="https://images.unsplash.com/photo-1579952363873-27f3bade9f55?q=80&w=800&auto=format&fit=crop" alt="Treino de Fundamentos e Controle de Bola" class="card-img">
+              <div class="card-badge"><i class="fa-solid fa-star"></i> Mais Procurado</div>
+              <div class="card-icon-floating"><i class="fa-solid fa-futbol"></i></div>
+            </div>
+            <div class="card-content">
+              <h3>Fundamentos & Controle de Bola</h3>
+              <p>Refinamento técnico de passe curto/longo, domínio orientado sob pressão, condução rápida e finalizações de média e longa distância.</p>
+              <ul class="metodo-features">
+                <li><i class="fa-solid fa-check-circle"></i> Controle de bola refinado</li>
+                <li><i class="fa-solid fa-check-circle"></i> Precisão nos passes e finalizações</li>
+              </ul>
+              <button class="btn-card">Detalhes do Método <i class="fa-solid fa-arrow-right"></i></button>
+            </div>
+          </article>
+
+          <!-- Card 2: Preparação Física -->
+          <article class="card-metodo" data-modal="modal-fisico">
+            <div class="card-img-wrapper">
+              <img src="https://images.unsplash.com/photo-1517649763962-0c623266010b?q=80&w=800&auto=format&fit=crop" alt="Preparação Física Específica para Futebol" class="card-img">
+              <div class="card-badge"><i class="fa-solid fa-bolt"></i> Alta Intensidade</div>
+              <div class="card-icon-floating"><i class="fa-solid fa-stopwatch"></i></div>
+            </div>
+            <div class="card-content">
+              <h3>Preparação Física Específica</h3>
+              <p>Treinamento funcional focado em ações reais de jogo: tiros curtos de aceleração, agilidade, mudança de direção e resistência muscular.</p>
+              <ul class="metodo-features">
+                <li><i class="fa-solid fa-check-circle"></i> Arranque e explosão muscular</li>
+                <li><i class="fa-solid fa-check-circle"></i> Prevenção de lesões articulares</li>
+              </ul>
+              <button class="btn-card">Detalhes do Método <i class="fa-solid fa-arrow-right"></i></button>
+            </div>
+          </article>
+
+          <!-- Card 3: Leitura Tática -->
+          <article class="card-metodo" data-modal="modal-tatico">
+            <div class="card-img-wrapper">
+              <img src="https://images.unsplash.com/photo-1508098682722-e99c43a406b2?q=80&w=800&auto=format&fit=crop" alt="Leitura Tática e Inteligência de Jogo" class="card-img">
+              <div class="card-badge"><i class="fa-solid fa-brain"></i> Cognitivo</div>
+              <div class="card-icon-floating"><i class="fa-solid fa-chess-board"></i></div>
+            </div>
+            <div class="card-content">
+              <h3>Leitura Tática & Cognição</h3>
+              <p>Aprimoramento da inteligência de jogo, visão periférica, ocupação racional de espaços e agilidade mental para tomadas de decisão.</p>
+              <ul class="metodo-features">
+                <li><i class="fa-solid fa-check-circle"></i> Reação rápida sob pressão</li>
+                <li><i class="fa-solid fa-check-circle"></i> Posicionamento corporal inteligente</li>
+              </ul>
+              <button class="btn-card">Detalhes do Método <i class="fa-solid fa-arrow-right"></i></button>
+            </div>
+          </article>
+
+          <!-- Card 4: Treino por Posição -->
+          <article class="card-metodo" data-modal="modal-especifico">
+            <div class="card-img-wrapper">
+              <img src="https://images.unsplash.com/photo-1526232761682-d26e03ac148e?q=80&w=800&auto=format&fit=crop" alt="Treinamento Técnico por Posição" class="card-img">
+              <div class="card-badge"><i class="fa-solid fa-bullseye"></i> Foco Posição</div>
+              <div class="card-icon-floating"><i class="fa-solid fa-crosshair"></i></div>
+            </div>
+            <div class="card-content">
+              <h3>Treinamento Específico por Posição</h3>
+              <p>Treinos focados nas exigências exatas da sua função em campo: duelos 1v1, marcação, desarmes, cruzamentos ou movimentação de pivô.</p>
+              <ul class="metodo-features">
+                <li><i class="fa-solid fa-check-circle"></i> Exercícios específicos por função</li>
+                <li><i class="fa-solid fa-check-circle"></i> Domínio dos duelos individuais</li>
+              </ul>
+              <button class="btn-card">Detalhes do Método <i class="fa-solid fa-arrow-right"></i></button>
+            </div>
+          </article>
+
+          <!-- Guia de expansão para inclusão de novos cards -->
+          <!-- 
+            Para adicionar um novo card no futuro, copie o modelo abaixo e altere as informações:
+
+            <article class="card-metodo" data-modal="modal-NOVO-ID">
+              <div class="card-img-wrapper">
+                <img src="URL_DA_SUA_IMAGEM.jpg" alt="Descrição da Imagem" class="card-img">
+                <div class="card-badge"><i class="fa-solid fa-star"></i> Badge Personalizado</div>
+                <div class="card-icon-floating"><i class="fa-solid fa-futbol"></i></div>
+              </div>
+              <div class="card-content">
+                <h3>Título do Novo Serviço</h3>
+                <p>Descrição detalhada do novo serviço oferecido.</p>
+                <ul class="metodo-features">
+                  <li><i class="fa-solid fa-check-circle"></i> Benefício 1</li>
+                  <li><i class="fa-solid fa-check-circle"></i> Benefício 2</li>
+                </ul>
+                <button class="btn-card">Detalhes do Método <i class="fa-solid fa-arrow-right"></i></button>
+              </div>
+            </article>
+          -->
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Modal Interativo de Detalhes -->
+  <div class="modal-overlay" id="modal-overlay">
+    <div class="modal-container">
+      <button class="modal-close" id="modal-close"><i class="fa-solid fa-xmark"></i></button>
+      <div class="modal-body" id="modal-body"></div>
+    </div>
+  </div>
+
+  <footer></footer>
+
+  <script src="./script.js"></script>
+</body>
+</html>
